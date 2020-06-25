@@ -1,0 +1,68 @@
+Dependencies for Project 'main', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 5060750::V5.06 update 6 (build 750)::ARMCC
+F (.\main.c)(0x5EA1F8B7)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178\ -I C:\ti\TivaWare_C_Series-2.1.4.178\driverlib-I.\RTE\_Target_1-IC:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129-D__UVISION_VERSION="529" -D_RTE_ -DTM4C129DNCPDT -Drvmdk -DPART_TM4C1294NCPDT -DTARGET_IS_TM4C129_RA0-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\TM4C1294NCPDT.h)(0x530F5566)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm4.h)(0x5D264786)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B88E8)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\system_TM4C129.h)(0x51C0615A)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9B88E8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9B88E8)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\sysctl.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\fpu.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\gpio.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\pin_map.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\interrupt.h)(0x5E8E7231)
+I (can.h)(0x5E8545F5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9B88E8)
+I (list.h)(0x5E3C55E4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9B88EA)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_uart.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\uart.h)(0x5E8E7232)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rom.h)(0x5EA091A8)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\rom_map.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_ints.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_memmap.h)(0x5E8E723C)
+F (.\driverlib.lib)(0x5E3C55E4)()
+F (.\can.c)(0x5E9E2BDE)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178\ -I C:\ti\TivaWare_C_Series-2.1.4.178\driverlib-I.\RTE\_Target_1-IC:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129-D__UVISION_VERSION="529" -D_RTE_ -DTM4C129DNCPDT -Drvmdk -DPART_TM4C1294NCPDT -DTARGET_IS_TM4C129_RA0-o .\objects\can.o --omf_browse .\objects\can.crf --depend .\objects\can.d)
+I (can.h)(0x5E8545F5)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B88E8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5D9B88E8)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5D9B88E8)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\TM4C1294NCPDT.h)(0x530F5566)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm4.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\system_TM4C129.h)(0x51C0615A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9B88E8)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_gpio.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_can.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_ints.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_nvic.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_sysctl.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\inc\hw_types.h)(0x5E8E723C)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\can.h)(0x5E8E7230)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\gpio.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\interrupt.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\pin_map.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\sysctl.h)(0x5E8E7231)
+I (C:\ti\TivaWare_C_Series-2.1.4.178\driverlib\uart.h)(0x5E8E7232)
+F (.\list.c)(0x5E3C55E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178\ -I C:\ti\TivaWare_C_Series-2.1.4.178\driverlib-I.\RTE\_Target_1-IC:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129-D__UVISION_VERSION="529" -D_RTE_ -DTM4C129DNCPDT -Drvmdk -DPART_TM4C1294NCPDT -DTARGET_IS_TM4C129_RA0-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
+I (list.h)(0x5E3C55E4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5D9B88EA)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B88E8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5D9B88E8)
+F (.\uart_setup.h)(0x5EA8D775)()
+F (RTE\Device\TM4C129DNCPDT\startup_TM4C129.s)(0x5E3C55E4)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "TM4C129DNCPDT SETA 1"--list .\listings\startup_tm4c129.lst --xref -o .\objects\startup_tm4c129.o --depend .\objects\startup_tm4c129.d)
+F (RTE\Device\TM4C129DNCPDT\system_TM4C129.c)(0x5E3C55E4)(--c99 -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I C:\ti\TivaWare_C_Series-2.1.4.178\ -I C:\ti\TivaWare_C_Series-2.1.4.178\driverlib-I.\RTE\_Target_1-IC:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-IC:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129-D__UVISION_VERSION="529" -D_RTE_ -DTM4C129DNCPDT -Drvmdk -DPART_TM4C1294NCPDT -DTARGET_IS_TM4C129_RA0-o .\objects\system_tm4c129.o --omf_browse .\objects\system_tm4c129.crf --depend .\objects\system_tm4c129.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5D9B88E8)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\TM4C129.h)(0x530F5566)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\TM4C129DNCPDT.h)(0x530F5566)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\core_cm4.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_version.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_compiler.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include\cmsis_armcc.h)(0x5D264786)
+I (C:\Users\turru\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C129\system_TM4C129.h)(0x51C0615A)
