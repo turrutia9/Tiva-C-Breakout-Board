@@ -62,7 +62,6 @@ void CAN0_Handler(void) //receive on CAN0 and send on CAN1
 	
 }
 
-
 /*
 Handler for receiving on CAN1
 Does similar thing as Int_CAN0_Handler_R
@@ -93,13 +92,6 @@ void CAN1_Handler(void) //receive CAN0 send CAN1
 
     CANMessageSet(CAN0_BASE, objID, outMsg, MSG_OBJ_TYPE_TX); //Send the message
 }
-
-
-
-
-
-
-
 
 /* Function initializes both can modules
  * CAN0 is set to transmit messages
@@ -142,10 +134,6 @@ void initCANModules(tCANBitClkParms *CANBitClk)
     // Take the CAN0/CAN1 device out of INIT state.
     CANEnable(CAN1_BASE);
 } //end CANinit()
-
-
-
-
 
 /* Function initializes GPIO port A
  * Make an object that contains: input, output, interrupt pins
