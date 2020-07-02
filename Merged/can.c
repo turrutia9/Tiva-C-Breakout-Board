@@ -153,20 +153,6 @@ void SetReceiveAll(uint32_t canbase, size_t fifolen, void (*interrupt)(void))
   CANIntEnable(canbase, CAN_INT_MASTER);
 }
 
-/*
-static void SuperLoopback(void)
-{
-  //Disable auto retransmit
-  CAN0->CTL |= 0x20;
-  CAN1->CTL |= 0x20;
-  
-//  CAN0->CTL |= 0x80;
-//  CAN0->TST |= 0x10; // Enable loopback
-//  CAN1->CTL |= 0x80;
-//  CAN1->TST |= 0x10; // Enable loopback
-}
-*/
-
 void can_SetLogging(uint8_t can_id, uint16_t arb_id, uint16_t arb_mask, can_LogCallback cb)
 {
   if(can_id == 0)
@@ -194,6 +180,7 @@ void can_SetLogging(uint8_t can_id, uint16_t arb_id, uint16_t arb_mask, can_LogC
     }
   }
 }
+
 void can_SetFiltering(uint8_t can_id, uint16_t arb_id, uint16_t arb_mask, uint8_t * data, uint8_t * data_mask)
 {
   if(can_id == 0)
@@ -223,6 +210,7 @@ void can_SetFiltering(uint8_t can_id, uint16_t arb_id, uint16_t arb_mask, uint8_
     }
   }
 }
+
 void can_ResetFunctions()
 {
   can0_log_entry_num = 0;
@@ -244,7 +232,7 @@ void button_Init()
 	startPlayback = false;
 }
 
-//wut
+//wut -- sets the gpio settings 5head
 void button_int(void)
 {
 	uint8_t data = GPIOPinRead(GPIOJ_AHB_BASE, GPIO_INT_PIN_0 |  GPIO_INT_PIN_1);
@@ -351,8 +339,4 @@ void can_Init(void)
   */
   
   //can_ReadBlock(&p);
-}
-
-void transmit_uart_test(void){
-	UARTCharPut(UART0_BASE, 'c');
 }

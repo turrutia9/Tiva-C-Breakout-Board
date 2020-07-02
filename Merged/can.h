@@ -36,6 +36,4 @@ void button_Init(void);
 void button_int(void);
 void led_Set(bool a, bool b);
 
-void transmit_uart_test(void);
-
 #endif

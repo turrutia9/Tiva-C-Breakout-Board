@@ -72,6 +72,7 @@ void uart_init(){
 	//wait to get data from the computer and send it back
 	//make this interrupt driven (handler for rx)
 }
+
 void get_interrupt(){
 	uint32_t status;
 	status = ROM_UARTIntStatus(UART0_BASE, true); //get interrupt status
@@ -92,7 +93,8 @@ void uart_send(const uint8_t* buffer, uint32_t count){
 		ROM_UARTCharPutNonBlocking(UART0_BASE, *buffer++);
 	}
 }
-void uart_test(){
+
+void uart_echo(){
 	g_ui32SysClock = MAP_SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
                                              SYSCTL_OSC_MAIN |
                                              SYSCTL_USE_PLL |
@@ -100,26 +102,26 @@ void uart_test(){
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPION);
 	ROM_GPIOPinTypeGPIOOutput(GPIO_PORTN_BASE, GPIO_PIN_0);
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
-  ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+  	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 	
 	ROM_IntMasterEnable();
 	
 	GPIOPinConfigure(GPIO_PA0_U0RX);
-  GPIOPinConfigure(GPIO_PA1_U0TX);
-  ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+ 	GPIOPinConfigure(GPIO_PA1_U0TX);
+	ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 	
 	ROM_UARTConfigSetExpClk(UART0_BASE, g_ui32SysClock, 115200,
                             (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
                              UART_CONFIG_PAR_NONE));
 	
 	ROM_IntEnable(INT_UART0);
-  ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+  	ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
 	uart_send((uint8_t *)"\033[2JEnter text: ", 16);
 	
 	while (1){}
 }
 
-//reference from this code
+//for reference -- configures the UART bases from register level
 void pcsr_Init()
 {
   SYSCTL->RCGCGPIO |= 0x8;
@@ -163,21 +165,6 @@ void pcsr_Init()
   // Enable UART2
   UART2->CTL |= 0x1;
 }
-
-void pcsr_ReadData(uint8_t * buf, size_t size)
-{
-  for(unsigned i = 0 ; i < size ; i ++)
-    buf[i] = UARTCharGet(UART2_BASE);
-}
-void pcsr_WriteData(const uint8_t * buf, size_t size)
-{
-  for(unsigned i = 0 ; i < size ; i ++)
-    UARTCharPut(UART2_BASE, buf[i]);
-}
-
-#define FUNCTION_LOG    0x00
-#define FUNCTION_FILTER 0x01
-#define FUNCTION_RESET  0x02
 
 void LogHandler(const CanPacket * packet)
 {
@@ -559,19 +546,27 @@ uint16_t getNoise()
 
 int main(void)
 {
-	//SysCtlClockFreqSet(SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480, 120000000);
+	SysCtlClockFreqSet(SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480, 120000000);
 
 	int dummy = 0;
-  FPUEnable();
+  	FPUEnable();
   
 	int_Init();
-  //led_Init();
-	//button_Init();
-	//uart_init();
+  	led_Init();
+	button_Init();
+	uart_init();
 	//pcsr_Init();
-	//can_setup();
-		
-	uart_test();
-	
-	return 0;
+	can_setup();
+
+	ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+	uart_send((uint8_t *)"\033[2JEnter text: ", 16);
+
+	while (SysTickValueGet() != 0){
+		//check for message
+		if (SysTickValueget() == 0){
+			//if message is found, process
+		}
+		//FSM
+		//else, reset systick
+	}
 }

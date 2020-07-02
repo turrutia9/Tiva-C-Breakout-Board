@@ -43,34 +43,6 @@ void push(struct list *_list, uint8_t *data)
 	
 }
 
-//void push_r(struct node *_node, uint8_t data[8])
-//{
-//	// Check to see if the next node is NULL
-//	// if it is, then we need to add the new node
-//	// to the next node.
-//	if(_node->next == NULL)
-//	{
-//		// allocate space for a new node
-//		struct node *new_node = (struct node*)malloc(sizeof(struct node));
-//		
-//		// copy the contiants from the input data to the
-//		// node's data array.
-//		memcpy(new_node->data, data, sizeof(uint8_t[8]));
-//		
-//		// set the next pointer to NULL signifying the end
-//		// of the list
-//		new_node->next = NULL;
-//		
-//		// Set the previous node to point to the new node
-//		_node->next = new_node;
-//		
-//		// Return through the recursion
-//		return;
-//	}
-//	// Step to the next node
-//	push_r(_node->next, data);
-//}
-
 void pop(struct list *_list, uint8_t data[8])
 {
 	// Check to see if the root node is NULL before doing
@@ -96,23 +68,3 @@ void pop(struct list *_list, uint8_t data[8])
 	// Start the recursive pop
 	//pop_r(_list->root, data);
 }
-
-//void pop_r(struct node *_node, uint8_t data[8])
-//{
-//	// Check to see if the 
-//	if(_node->next->next == NULL)
-//	{
-//		// Copy the data to the data array
-//		memcpy(data, _node->next->data, sizeof(uint8_t[8]));
-//		
-//		// Free the memory
-//		free(_node->next);
-//		
-//		// Set the new end node as the current node
-//		_node->next = NULL;
-//		return;
-//	}
-//	// Step to the next node
-//	pop_r(_node->next, data);
-//}
-
