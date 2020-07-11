@@ -55,6 +55,7 @@ void led_Byte(uint8_t byte)
 }
 
 void uart_init(){
+	//TODO: REVIEW HERE
 	g_ui32SysClock = MAP_SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ |
                                              SYSCTL_OSC_MAIN |
                                              SYSCTL_USE_PLL |
